@@ -64,44 +64,21 @@ document.addEventListener('DOMContentLoaded', () => {
   const form = document.getElementById('contact-form');
   if (form) {
     form.addEventListener('submit', e => {
-      e.preventDefault();
 
       const formData = new FormData(form);
       const data = Object.fromEntries(formData);
 
       // Basic validation
-      if (!data.name || !data.phone || !data.service) {
+if (!data.name || !data.phone || !data.service) {
+        e.preventDefault();
         showFormMessage('Please fill in all required fields.', 'error');
         return;
       }
-
       // In production, this would POST to a service like Formspree, Netlify Forms, or a custom endpoint.
       // For GitHub Pages, use https://formspree.io or similar.
       // Replace the action URL below with your Formspree endpoint.
 
-      const formAction = form.getAttribute('action');
-      if (formAction && formAction !== '#') {
-        fetch(formAction, {
-          method: 'POST',
-          headers: { 'Accept': 'application/json' },
-          body: formData
-        })
-        .then(response => {
-          if (response.ok) {
-            showFormMessage('Thank you! Rob will call you personally to discuss your project and schedule your free on-site estimate.', 'success');
-            form.reset();
-          } else {
-            showFormMessage('Something went wrong. Please call (209) 223-2906 directly.', 'error');
-          }
-        })
-        .catch(() => {
-          showFormMessage('Something went wrong. Please call (209) 223-2906 directly.', 'error');
-        });
-      } else {
-        // Demo mode — no backend configured yet
-        showFormMessage('Thank you! Rob will call you personally to discuss your project and schedule your free on-site estimate.', 'success');
-        form.reset();
-      }
+// Form submits normally to Formspree via the action URL in HTML
     });
   }
 
