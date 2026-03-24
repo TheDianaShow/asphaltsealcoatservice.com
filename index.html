@@ -25,6 +25,61 @@
 
   <!-- Favicon (replace with actual favicon) -->
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' fill='%232C2C2C' rx='4'/><text x='16' y='22' font-size='18' font-weight='bold' fill='%23C8A04A' text-anchor='middle' font-family='sans-serif'>A</text></svg>">
+  <!-- Structured Data: LocalBusiness Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Asphalt Sealcoat Service",
+    "description": "Licensed sealcoating contractor serving Amador, Calaveras, El Dorado, and Sacramento counties. Sealcoating, line striping, crack filling, and ADA parking compliance.",
+    "url": "https://asphaltsealcoatservice.com",
+    "telephone": "+1-209-223-2906",
+    "email": "andraesasphalt@gmail.com",
+    "foundingDate": "1993",
+    "image": "https://asphaltsealcoatservice.com/images/hero-bg.jpg",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "11037 Quail Drive",
+      "addressLocality": "Pine Grove",
+      "addressRegion": "CA",
+      "postalCode": "95665",
+      "addressCountry": "US"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 38.4124,
+      "longitude": -120.6582
+    },
+    "areaServed": [
+      { "@type": "AdministrativeArea", "name": "Amador County, CA" },
+      { "@type": "AdministrativeArea", "name": "Calaveras County, CA" },
+      { "@type": "AdministrativeArea", "name": "El Dorado County, CA" },
+      { "@type": "AdministrativeArea", "name": "Sacramento County, CA" },
+      { "@type": "AdministrativeArea", "name": "San Joaquin County, CA" }
+    ],
+    "serviceType": [
+      "Sealcoating",
+      "Line Striping",
+      "Crack Filling",
+      "ADA Parking Compliance",
+      "Parking Stop Installation",
+      "Concrete Priming"
+    ],
+    "priceRange": "$$",
+    "paymentAccepted": "Cash, Check",
+    "hasCredential": {
+      "@type": "EducationalOccupationalCredential",
+      "credentialCategory": "California Contractor License",
+      "recognizedBy": {
+        "@type": "Organization",
+        "name": "Contractors State License Board"
+      },
+      "identifier": "762373"
+    },
+    "sameAs": []
+  }
+  </script>
+
 </head>
 <body>
 
@@ -418,8 +473,8 @@
 
         <!-- Contact Form -->
         <div class="animate-on-scroll">
-<form id="contact-form" class="contact-form" action="https://formspree.io/f/mkoqlvol" method="POST">
-<input type="hidden" name="_next" value="https://asphaltsealcoatservice.com/#contact">            
+          <form id="contact-form" class="contact-form" action="https://formspree.io/f/mkoqlvol" method="POST">
+            <input type="hidden" name="_next" value="https://asphaltsealcoatservice.com/#contact">
             <div class="form-row">
               <div class="form-group">
                 <label for="name">Name *</label>
